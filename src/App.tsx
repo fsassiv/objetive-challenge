@@ -1,15 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import './App.scss';
+import Header from '@components/Header';
+import SearchBar from '@components/SearchBar';
+import React from 'react';
 
 const App = () => {
-  const [value, setValue] = useState('');
-
-  useEffect(() => {
-    console.log('Mounted again');
-    setValue('Sinner');
-  }, []);
-
-  return <div>Hello world {value}</div>;
+  const handleSubmit = (text: String) => {
+    console.log('Submit', text);
+  };
+  return (
+    <>
+      <Header />
+      <div className="container">
+        <h1 className="app__title">Busca de personagens</h1>
+        <SearchBar handleSubmit={handleSubmit} />
+      </div>
+    </>
+  );
 };
 
 export default App;

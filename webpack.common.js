@@ -16,6 +16,7 @@ module.exports = {
     alias: {
       '@components': path.resolve(__dirname, 'src/components/'),
       '@layout': path.resolve(__dirname, 'src/layout/'),
+      '@assets': path.resolve(__dirname, 'src/assets/'),
     },
   },
   module: {
@@ -42,6 +43,21 @@ module.exports = {
           'css-loader',
           'sass-loader',
         ],
+      },
+      {
+        test: /\.(png|jp(e*)g|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
       },
     ],
   },
