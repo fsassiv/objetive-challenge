@@ -1,0 +1,15 @@
+.app {
+  &__title {
+    text-align: center;
+    font-family: $font-secondary;
+    font-size: nth($sizes, 5);
+    line-height: 3rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+    @include upTo($lg) {
+      text-align: left;
+      font-size: nth($sizes, 6);
+      margin-bottom: 16px;
+    }
+  }
+}

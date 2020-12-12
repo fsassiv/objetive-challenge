@@ -1,0 +1,51 @@
+.header {
+  padding: nth($sizes, 4) nth($sizes, 5);
+  background-color: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    width: 96px;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 22px;
+    @include upTo($lg) {
+      flex-direction: row;
+    }
+  }
+
+  &__text {
+    font-family: $font-secondary;
+    text-align: right;
+    margin-bottom: 2px;
+    @include upTo($lg) {
+      font-size: nth($sizes, 2);
+      margin-bottom: 0px;
+      margin-right: 2px;
+    }
+    &.is-bold {
+      font-weight: bold;
+    }
+  }
+
+  &__btn {
+    border-radius: 4px;
+    background-color: $snow;
+    font-family: $font-secondary;
+    font-weight: bold;
+    font-size: nth($sizes, 3);
+    padding: 7px;
+    transition: all linear 0.25s;
+    &:hover {
+      background-color: $dark-smoke;
+      color: $snow;
+    }
+  }
+}

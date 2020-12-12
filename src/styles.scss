@@ -1,0 +1,9 @@
+@import './styles/variables';
+@import './styles/mixins';
+@import './styles/reset';
+
+// COMPONENTS
+@import './styles/miscellaneous';
+@import './styles/components/header';
+@import './styles/components/container';
+@import './styles/components/SearchBar.scss';
