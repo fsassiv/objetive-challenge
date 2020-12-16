@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin downTo($bp) {
+  @media screen and (max-width: $bp) {
+    @content;
+  }
+}
